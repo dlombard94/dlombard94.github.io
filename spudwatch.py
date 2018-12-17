@@ -66,5 +66,12 @@ while True:
           temp=round(sense.get_temperature(),2)
 	  hum=round(sense.get_humidity(),2)
 	
+	  if hum < 94:
+	  	humidifier_on()
+  	  elif hum > 96:
+  		dehumidifier_on()
+  	  else:
+  		hum_equip_off()
+		
  	  writeData(temp,hum,humidifier,dehumidifier)
           time.sleep(60)
