@@ -2,6 +2,11 @@ import urllib2
 import json
 import time
 from sense_hat import SenseHat
+import logging
+
+#creates log file for monitoring purposes
+logging.basicConfig(filename='spudwatch2.log',level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.info('Starting SpudWatch')
 
 WRITE_API_KEY='1LG9Y1ADWFC5U1MX'
 
@@ -124,6 +129,7 @@ def writeData(temp,hum,humidifier,dehumidifier,cooler,heater):
 	  conn.close()
 
 while True:
+	try:
 	  global humidifier
           global dehumidifer
 	  global cooler
@@ -160,3 +166,6 @@ while True:
 	  
 	  #repeats every 30 seconds
           time.sleep(30)
+	except Exception as e:
+          logging.error(e)
+
