@@ -8,57 +8,62 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
   </head>
   <body>
-    <section class="ui center aligned middle aligned three column grid segment">
-  
-      <div class="centre aligned column">
-            <header class="ui header"> Humidity </header>
-            <h2 class="ui icon header">
-            <div class="value">
-              <i class="blue tint icon"></i>
-            </div>
-      </div>
-
-      <div class="centre aligned column">
-            <h2 class="ui icon header">
-            <div class="value">
-              <i class="blue tint icon"></i>
-            </div>
-
-            <div class="value">
-              <i class="red thermometer half icon"></i>
-            </div>
-
-            <div class="content">SpudWatch</div>
-            <div class="sub header">Monitor temperatur and humidity as well as equipment statuses</div>
-      </div>
-
-      <div class="centre aligned column">
-            <header class="ui header"> Temperature </header>
-            <h2 class="ui icon header">
-
-            <div class="value">
-              <i class="red thermometer half icon"></i>
-            </div>
-      </div>
+    <section class="ui container">
       
-    </section>
+      <section class="ui center aligned middle aligned three column grid segment">
+                
+        <div class="centre aligned column">
+              <header class="ui header"> Temperature </header>
+              <h2 class="ui icon header">
+              <div class="value">
+                <i class="red thermometer half icon"></i>
+              </div>
+        </div>  
+
+        <div class="centre aligned column">
+              <h2 class="ui icon header">
+              <div class="value">
+                <i class="blue tint icon"></i>
+              </div>
+
+              <div class="value">
+                <i class="red thermometer half icon"></i>
+              </div>
+
+              <div class="content">SpudWatch</div>
+              <div class="sub header">Monitor temperatur and humidity as well as equipment statuses</div>
+         </div>
+         
+          <div class="centre aligned column">
+              <header class="ui header"> Humidity </header>
+              <h2 class="ui icon header">
+              <div class="value">
+                <i class="blue tint icon"></i>
+              </div>
+          </div>
 
         
 
-    <section class="ui center aligned middle aligned two column grid segment">
-      <div class="column">
-        <header class="ui header"> Temperature </header>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Temperature+&type=line"></iframe>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Cooler+%281%2F0+%3D+On%2FOff%29&type=step"></iframe>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Heater+%281%2F0+%3D+On%2FOff%29&type=line"></iframe>
-      </div>
-      <div class="column">
-        <header class="ui header"> Humidity </header>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line"></iframe>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidifier+%281%2F0+%3D+On%2FOff%29&type=step"></iframe>
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Dehumidifier+%281%2F0+%3D+On%2FOff%29&type=line"></iframe>
-      </div>
-    </section> 
+      </section>
+
+
+
+      <section class="ui center aligned middle aligned two column grid segment">
+        <div class="column">
+          <header class="ui header"> Temperature </header>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Temperature+&type=line"></iframe>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Cooler+%281%2F0+%3D+On%2FOff%29&type=step"></iframe>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Heater+%281%2F0+%3D+On%2FOff%29&type=line"></iframe>
+        </div>
+        <div class="column">
+          <header class="ui header"> Humidity </header>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line"></iframe>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidifier+%281%2F0+%3D+On%2FOff%29&type=step"></iframe>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/655413/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Dehumidifier+%281%2F0+%3D+On%2FOff%29&type=line"></iframe>
+        </div>
+      </section> 
+          
+    </section>
     
     
     
