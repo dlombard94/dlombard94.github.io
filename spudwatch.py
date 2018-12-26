@@ -1,6 +1,7 @@
 import urllib2
 import json
 import time
+import csv
 from sense_hat import SenseHat
 import logging
 
@@ -9,6 +10,7 @@ logging.basicConfig(filename='spudwatch2.log',level=logging.INFO, format='%(asct
 logging.info('Starting SpudWatch')
 
 WRITE_API_KEY='1LG9Y1ADWFC5U1MX'
+CHANNEL_ID=655413
 
 baseURL='https://api.thingspeak.com/update?api_key=%s' % WRITE_API_KEY
 
@@ -20,9 +22,21 @@ dehumidifier = 0
 cooler = 0
 heater = 0
 
+#defining the amount of results to export each time to the csv file
+results = 1000
+
 #using rgb to define colors to be shown on Sensehat in certain situations
 red = (255,0,0)
 green = (0,255,0)
+
+#function which exports all field data to a csv file
+def export():
+  conn = urllib2.urlopen("https://api.thingspeak.com/channels/%d/feeds.csv?results=%d&api_key=%s" % (CHANNEL_ID,results,WRITE_API_KEY))
+  print(conn.read())
+  conn.close()
+
+  with open('spudwatchexport.csv', 'ab') as f:
+        f.write(conn.read())
 
 #function to turn on humidifer if not on already
 def humidifier_on():
@@ -163,6 +177,14 @@ while True:
 	
           #uses defined fucntion above to push all necessay variables up to thingspeak	
  	  writeData(temp,hum,humidifier,dehumidifier,cooler,heater)
+	
+          #increments count each time data is written
+	  #when 1000 points are written they are exported and appended to the export.csv file
+	  count +=1
+
+          if count == 1000:
+            fetch()
+            count = 0
 	  
 	  #repeats every 30 seconds
           time.sleep(30)
