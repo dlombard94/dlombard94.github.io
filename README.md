@@ -15,5 +15,5 @@ Have 6 fields in thing speak
 6. Dehumidifer Status - On/Off
 
 These fields are being uploaded every 30 seconds
-Also use thingtweet platform to tweet when temp or humidity go outside the desired range
+Also use thingtweet platform to tweet when temp or humidity go outside the desired range. Twitter profile is https://twitter.com/dlombard94
 I also use a try except block to catch and log and exceptions.
