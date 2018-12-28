@@ -16,4 +16,5 @@ Have 6 fields in thing speak
 
 These fields are being uploaded every 30 seconds
 Also use thingtweet platform to tweet when temp or humidity go outside the desired range. Twitter profile is https://twitter.com/dlombard94
+Website is at https://dlombard94.github.io/index.html
 I also use a try except block to catch and log and exceptions.
